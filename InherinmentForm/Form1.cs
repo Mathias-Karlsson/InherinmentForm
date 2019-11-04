@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace InherinmentForm
 {
-    public partial class Form1 : Form
+    public partial class Djur : Form
     {
         private List<Animal> animals = new List<Animal>();
 
-        public Form1()
+        public Djur()
         {
             InitializeComponent();
 
@@ -45,11 +45,13 @@ namespace InherinmentForm
             {
                 Animal animal = animals[selectedIndex];
                 lbSpecies.Text = animal.Species.ToString();
+                pictureBox1.Image = imageList1.Images[(int)animal.Species];
                 lbCanFly.Text = (animal.CanFly ? "Kan flyga" : "Kan inte flyga");
             } else
             {
                 lbSpecies.Text = "";
                 lbCanFly.Text = "";
+                pictureBox1.Image = null;
             }
             
         }

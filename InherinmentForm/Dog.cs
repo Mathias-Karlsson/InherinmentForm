@@ -11,7 +11,7 @@ namespace InherinmentForm
         public Dog(string name)
         {
             Name = name;
-            Species = 1;
+            Species = SPECIES.DOG;
             CanFly = false;
         }
     }
